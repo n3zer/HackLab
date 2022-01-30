@@ -38,15 +38,17 @@ namespace GrayHack
             if (!Directory.Exists($@"{FileManager.GameFilePath}\computers\computer"))
                 ZipManager.ExtractFile($@"{FileManager.GameFilePath}\computers", "computer", Resources.computer);
 
-            MessageBox.Show(string.Join("\n",Directory.GetDirectories($@"{FileManager.pathToPlayerPc}\home\")));
 
             if (!File.Exists($@"{FileManager.pathToPlayerPc}\home\{LoginTextBox.Text}.txt") && LoginTextBox.Text != "" && PasswordTextBox.Text != "")
             {
+                // exract user packages
                 ZipManager.ExtractFile($@"{FileManager.pathToPlayerPc}\home\{LoginTextBox.Text}",LoginTextBox.Text, Resources.user);
-
+                //write user name & pass  
                 using (StreamWriter fs = new StreamWriter($@"{FileManager.pathToPlayerPc}\etc\passwd"))
                 {
-                    fs.WriteLine(LoginTextBox.Text + ":" + PasswordTextBox.Text);
+                    string pass = PasswordTextBox.Text.Encrypt();
+
+                    fs.Write(LoginTextBox.Text + ":" + PasswordTextBox.Text.Encrypt());
                     fs.Dispose();
                 }
                 this.Close();

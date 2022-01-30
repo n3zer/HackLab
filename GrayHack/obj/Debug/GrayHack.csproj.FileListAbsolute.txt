@@ -12,3 +12,16 @@ E:\проекты\c#\GrayHack\GrayHack\obj\Debug\GrayHack.LoginMenu.resources
 E:\проекты\c#\GrayHack\GrayHack\obj\Debug\GrayHack.MessageGame.resources
 E:\проекты\c#\GrayHack\GrayHack\obj\Debug\GrayHack.Desktop.resources
 E:\проекты\c#\GrayHack\GrayHack\obj\Debug\GrayHack.CreateUser.resources
+C:\Users\itstep\source\repos\HackLab\GrayHack\bin\Debug\GrayHack.exe.config
+C:\Users\itstep\source\repos\HackLab\GrayHack\bin\Debug\GrayHack.exe
+C:\Users\itstep\source\repos\HackLab\GrayHack\bin\Debug\GrayHack.pdb
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.csprojAssemblyReference.cache
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.CreateUser.resources
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.Desktop.resources
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.LoginMenu.resources
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.MessageGame.resources
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.Properties.Resources.resources
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.csproj.GenerateResource.cache
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.csproj.CoreCompileInputs.cache
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.exe
+C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.pdb

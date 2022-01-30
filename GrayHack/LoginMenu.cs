@@ -64,9 +64,17 @@ namespace GrayHack
 
         private void SigninButton_Click(object sender, EventArgs e)
         {
-            if (Directory.Exists($@"{FileManager.GameFilePath}\computers\computer\home\{LoginTextBox.Text}"))
+            if (File.Exists($@"{FileManager.GameFilePath}\computers\computer\etc\passwd"))
             {
-                MessageBox.Show("a");
+                using (StreamReader sr = new StreamReader($@"{FileManager.GameFilePath}\computers\computer\etc\passwd"))
+                {
+                    string[] UserInfo = sr.ReadLine().Split(':');
+                    if (UserInfo[0] == LoginTextBox.Text && UserInfo[1].Decrypt() == PasswordTextBox.Text)
+                    {
+                        MessageBox.Show("ok");
+                    }
+
+                }
             }
         }
     }

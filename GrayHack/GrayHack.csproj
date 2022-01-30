@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="assets\scripts\Encode.cs" />
     <Compile Include="assets\scripts\FileManager.cs" />
     <Compile Include="assets\scripts\User.cs" />
     <Compile Include="assets\scripts\ZipManager.cs" />
@@ -115,9 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\icon\system\close.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\icon\system\Shutdown.png" />
