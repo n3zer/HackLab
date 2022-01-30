@@ -4,16 +4,23 @@ using System.Collections.Generic;
 namespace GrayHack.assets.scripts
 {
 	
-
 	internal class User
 	{
-		List<Quest> _quests = new List<Quest>
-		{
-			new Quest(1, "Кредитные данные", "Необзодимо")
-		};
-		public User(string name, string nowPath,string pcPath, int exp, )
-        {
+		private string _name;
+		private string _nowPath;
+		private string _pcPath;
+		private int _exp;
 
+		Quest _questList;
+
+		public User(string name, string nowPath,string pcPath, int exp, Quest questList)
+        {
+			_name = name;
+			_nowPath = nowPath;
+			_pcPath = pcPath;
+			_exp = exp;
+
+			_questList = questList;
         }
 
 	}
