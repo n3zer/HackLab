@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Windows.Forms;
+using GrayHack.Properties;
 
 
 
@@ -19,17 +20,18 @@ namespace GrayHack.assets.scripts
 
 		public static void ExtractFile(string path, string nameFile, byte[] file)
 		{
-			string pathZip = $@"{path}\{nameFile}{_packagesFormat}";
 
-			FileManager.CreateFolder(path);
-			File.WriteAllBytes(pathZip, file);
+            string pathZip = $@"{path}\{nameFile}{_packagesFormat}";
 
-			if (Directory.Exists($@"{path}\{nameFile}"))
-				Directory.Delete($@"{path}\{nameFile}", true);
+            FileManager.CreateFolder(path);
+            File.WriteAllBytes(pathZip, file);
 
-			ZipFile.ExtractToDirectory(pathZip, path);
-			File.Delete(pathZip);
-		}
+            if (Directory.Exists($@"{path}\{nameFile}"))
+                Directory.Delete($@"{path}\{nameFile}", true);
+
+            ZipFile.ExtractToDirectory(pathZip, path);
+            File.Delete(pathZip);
+        }
 
 	}
 }

@@ -23,7 +23,7 @@ namespace GrayHack
 
             ShutdownButton.Click += (s, a) => { CloseGame(); };
 
-            FullScreenCheckBox.Click += (s, a) => { GoFullscreen(_isFullScreen); };
+            FullScreenCheckBox.Click += (s, a) => { this.GoFullscreen(); };
 
             CreateUserButton.Click += (s, a) => {
                 this.Enabled = false;
@@ -33,22 +33,7 @@ namespace GrayHack
                 };
         }
 
-        private void GoFullscreen(bool fullscreen)
-        {
-            if (!fullscreen)
-            {
-                _isFullScreen = true;
-                this.WindowState = FormWindowState.Normal;
-                this.FormBorderStyle = FormBorderStyle.None;
-                this.Bounds = Screen.PrimaryScreen.Bounds;
-            }
-            else
-            {
-                _isFullScreen = false;
-                this.WindowState = FormWindowState.Maximized;
-                this.FormBorderStyle = FormBorderStyle.Sizable;
-            }
-        }
+        
 
         private void CloseGame()
         {
@@ -71,7 +56,10 @@ namespace GrayHack
                     string[] UserInfo = sr.ReadLine().Split(':');
                     if (UserInfo[0] == LoginTextBox.Text && UserInfo[1].Decrypt() == PasswordTextBox.Text)
                     {
-                        MessageBox.Show("ok");
+                        Desktop desktop = new Desktop();
+                        desktop.Show();
+                        this.Enabled = false;
+                        this.Hide();
                     }
 
                 }

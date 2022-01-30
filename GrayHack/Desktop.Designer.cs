@@ -1,4 +1,6 @@
-﻿namespace GrayHack
+﻿using System.Diagnostics;
+
+namespace GrayHack
 {
     partial class Desktop
     {
@@ -37,11 +39,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Desktop";
             this.Text = "Desktop";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Desktop_FormClosing);
             this.Load += new System.EventHandler(this.Desktop_Load);
             this.ResumeLayout(false);
 
         }
 
+        
         #endregion
     }
 }
