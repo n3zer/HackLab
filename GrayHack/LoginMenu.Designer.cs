@@ -32,13 +32,13 @@ namespace GrayHack
         private void InitializeComponent()
         {
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.CreateUserButton = new System.Windows.Forms.Button();
             this.SigninButton = new System.Windows.Forms.Button();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.LoginLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.FullScreenCheckBox = new System.Windows.Forms.CheckBox();
-            this.CreateUserButton = new System.Windows.Forms.Button();
             this.ShutdownButton = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,15 @@ namespace GrayHack
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(382, 454);
             this.LoginPanel.TabIndex = 0;
+            // 
+            // CreateUserButton
+            // 
+            this.CreateUserButton.Location = new System.Drawing.Point(307, 427);
+            this.CreateUserButton.Name = "CreateUserButton";
+            this.CreateUserButton.Size = new System.Drawing.Size(72, 24);
+            this.CreateUserButton.TabIndex = 3;
+            this.CreateUserButton.Text = "Create user";
+            this.CreateUserButton.UseVisualStyleBackColor = true;
             // 
             // SigninButton
             // 
@@ -117,15 +126,6 @@ namespace GrayHack
             this.FullScreenCheckBox.Text = "Full Screen";
             this.FullScreenCheckBox.UseVisualStyleBackColor = true;
             // 
-            // CreateUserButton
-            // 
-            this.CreateUserButton.Location = new System.Drawing.Point(307, 427);
-            this.CreateUserButton.Name = "CreateUserButton";
-            this.CreateUserButton.Size = new System.Drawing.Size(72, 24);
-            this.CreateUserButton.TabIndex = 3;
-            this.CreateUserButton.Text = "Create user";
-            this.CreateUserButton.UseVisualStyleBackColor = true;
-            // 
             // ShutdownButton
             // 
             this.ShutdownButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -133,7 +133,7 @@ namespace GrayHack
             this.ShutdownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ShutdownButton.FlatAppearance.BorderSize = 0;
             this.ShutdownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ShutdownButton.Location = new System.Drawing.Point(1308, 660);
+            this.ShutdownButton.Location = new System.Drawing.Point(1308, 638);
             this.ShutdownButton.Name = "ShutdownButton";
             this.ShutdownButton.Size = new System.Drawing.Size(37, 37);
             this.ShutdownButton.TabIndex = 1;
@@ -145,7 +145,7 @@ namespace GrayHack
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.ClientSize = new System.Drawing.Size(1357, 709);
+            this.ClientSize = new System.Drawing.Size(1357, 687);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.FullScreenCheckBox);
             this.Controls.Add(this.ShutdownButton);

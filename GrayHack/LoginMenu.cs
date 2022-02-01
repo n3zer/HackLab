@@ -56,7 +56,8 @@ namespace GrayHack
                     string[] UserInfo = sr.ReadLine().Split(':');
                     if (UserInfo[0] == LoginTextBox.Text && UserInfo[1].Decrypt() == PasswordTextBox.Text)
                     {
-                        Desktop desktop = new Desktop();
+                        User user = new User(LoginTextBox.Text, @"\", $@"{FileManager.GameFilePath}\computers\computer\", 0);
+                        Desktop desktop = new Desktop(user);
                         desktop.Show();
                         this.Enabled = false;
                         this.Hide();

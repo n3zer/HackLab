@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace GrayHack.assets.scripts
 {
@@ -21,6 +22,12 @@ namespace GrayHack.assets.scripts
                 form.WindowState = FormWindowState.Maximized;
                 form.FormBorderStyle = FormBorderStyle.Sizable;
             }
+        }
+
+        public static ToolStripLabel SetDate(this ToolStripLabel label)
+        {
+            label.Text = $"{DateTime.Now.DayOfWeek} {DateTime.Now.ToString("HH:mm")}";
+            return label;
         }
     }
 }

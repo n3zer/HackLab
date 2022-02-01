@@ -127,6 +127,6 @@
         private System.Windows.Forms.ToolStripLabel titleLabel;
         private System.Windows.Forms.Label textLabel;
         private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Button CancelButton;
+        private new System.Windows.Forms.Button CancelButton;
     }
 }

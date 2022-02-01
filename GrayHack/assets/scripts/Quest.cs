@@ -2,7 +2,7 @@
 
 namespace GrayHack.assets.scripts
 {
-    class Quest
+    public class Quest
     {
         private int _id;
         private string _name;
@@ -11,7 +11,7 @@ namespace GrayHack.assets.scripts
         private bool _isCompleted;
 
 
-        List<Quest> _quests = new List<Quest>
+        public static List<Quest> _quests = new List<Quest>
         {
             new Quest(1, "Кредитные данные", "Необходимо получить кредитные данные", "Cmming soon", false),
             new Quest(2, "Cmming soon", "Cmming soon", "Cmming soon", false)
