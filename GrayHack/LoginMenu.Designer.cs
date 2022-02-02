@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace GrayHack
 {
@@ -45,7 +46,9 @@ namespace GrayHack
             // 
             // LoginPanel
             // 
-            this.LoginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.LoginPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.LoginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(36)))));
+            this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginPanel.Controls.Add(this.CreateUserButton);
             this.LoginPanel.Controls.Add(this.SigninButton);
             this.LoginPanel.Controls.Add(this.passwordLabel);
@@ -119,16 +122,19 @@ namespace GrayHack
             // FullScreenCheckBox
             // 
             this.FullScreenCheckBox.AutoSize = true;
+            this.FullScreenCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.FullScreenCheckBox.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FullScreenCheckBox.Location = new System.Drawing.Point(12, 12);
             this.FullScreenCheckBox.Name = "FullScreenCheckBox";
             this.FullScreenCheckBox.Size = new System.Drawing.Size(79, 17);
             this.FullScreenCheckBox.TabIndex = 2;
             this.FullScreenCheckBox.Text = "Full Screen";
-            this.FullScreenCheckBox.UseVisualStyleBackColor = true;
+            this.FullScreenCheckBox.UseVisualStyleBackColor = false;
             // 
             // ShutdownButton
             // 
             this.ShutdownButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ShutdownButton.BackColor = System.Drawing.Color.Transparent;
             this.ShutdownButton.BackgroundImage = global::GrayHack.Properties.Resources.Shutdown;
             this.ShutdownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ShutdownButton.FlatAppearance.BorderSize = 0;
@@ -144,11 +150,14 @@ namespace GrayHack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::GrayHack.Properties.Resources.LoginMenuBg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1357, 687);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.FullScreenCheckBox);
             this.Controls.Add(this.ShutdownButton);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "LoginMenu";
             this.Text = "Form1";
@@ -181,6 +190,24 @@ namespace GrayHack
                 (LoginPanel.ClientSize.Height - LoginTextBox.Height) / 2 + 100);
 
             ShutdownButton.Location = new Point(this.ClientSize.Width - ShutdownButton.Width - 10, this.ClientSize.Height - ShutdownButton.Height - 10);
+
+
+            SetRoundedShape(this.LoginPanel, 15);
+        }
+
+
+        void SetRoundedShape(Control control, int radius)
+        {
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            path.AddLine(radius, 0, control.Width - radius, 0);
+            path.AddArc(control.Width - radius, 0, radius, radius, 270, 90);
+            path.AddLine(control.Width, radius, control.Width, control.Height - radius);
+            path.AddArc(control.Width - radius, control.Height - radius, radius, radius, 0, 90);
+            path.AddLine(control.Width - radius, control.Height, radius, control.Height);
+            path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
+            path.AddLine(0, control.Height - radius, 0, radius);
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            control.Region = new Region(path);
         }
 
         #endregion

@@ -12,7 +12,7 @@ namespace GrayHack.assets.scripts
     {
        
         //full screen
-        public static void GoFullScreen(this Form form) { GoFullScreen(form, false); }
+        public static void GoFullScreen(this Form form) { GoFullScreen(form, Program.Settings._isFullScreen); }
 
 
         public static void GoFullScreen(this Form form, bool isFullScreen)
@@ -20,14 +20,14 @@ namespace GrayHack.assets.scripts
             
             if (!isFullScreen)
             {
-                Program.Settings._isFullScreen = false;
+                Program.Settings._isFullScreen = true;
                 form.WindowState = FormWindowState.Normal;
                 form.FormBorderStyle = FormBorderStyle.None;
                 form.Bounds = Screen.PrimaryScreen.Bounds;
             }
             else
             {
-                Program.Settings._isFullScreen = true;
+                Program.Settings._isFullScreen = false;
                 form.WindowState = FormWindowState.Maximized;
                 form.FormBorderStyle = FormBorderStyle.Sizable;
             }

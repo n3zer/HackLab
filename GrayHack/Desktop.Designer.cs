@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace GrayHack
 {
@@ -36,6 +37,7 @@ namespace GrayHack
             this.dateLabel = new System.Windows.Forms.ToolStripLabel();
             this.UserProfileButton = new System.Windows.Forms.ToolStripButton();
             this.WifiButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.dateTimer = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.TopMenu.SuspendLayout();
@@ -43,15 +45,16 @@ namespace GrayHack
             // 
             // TopMenu
             // 
-            this.TopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.TopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(43)))));
             this.TopMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuButton,
             this.dateLabel,
             this.UserProfileButton,
-            this.WifiButton});
+            this.WifiButton,
+            this.toolStripProgressBar1});
             this.TopMenu.Location = new System.Drawing.Point(0, 0);
             this.TopMenu.Name = "TopMenu";
-            this.TopMenu.Size = new System.Drawing.Size(1331, 25);
+            this.TopMenu.Size = new System.Drawing.Size(1079, 25);
             this.TopMenu.TabIndex = 0;
             this.TopMenu.Text = "toolStrip1";
             // 
@@ -94,16 +97,25 @@ namespace GrayHack
             this.WifiButton.Size = new System.Drawing.Size(23, 22);
             this.WifiButton.Text = "wifi";
             // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(20, 22);
+            this.toolStripProgressBar1.Value = 50;
+            // 
             // dateTimer
             // 
             this.dateTimer.Interval = 2000;
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(43)))));
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Location = new System.Drawing.Point(0, 570);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1331, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1079, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -114,7 +126,7 @@ namespace GrayHack
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.BackgroundImage = global::GrayHack.Properties.Resources.HackLabBg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1331, 595);
+            this.ClientSize = new System.Drawing.Size(1079, 595);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.TopMenu);
             this.DoubleBuffered = true;
@@ -139,5 +151,6 @@ namespace GrayHack
         private System.Windows.Forms.ToolStripButton UserProfileButton;
         private System.Windows.Forms.ToolStripButton WifiButton;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
     }
 }

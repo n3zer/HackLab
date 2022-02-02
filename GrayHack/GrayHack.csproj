@@ -135,6 +135,8 @@
     <None Include="assets\icon\system\UserProfile.png" />
     <None Include="assets\icon\system\wifi.png" />
     <None Include="assets\images\backgrounds\HackLabBg.png" />
+    <None Include="assets\images\backgrounds\LoginMenuBg.png" />
+    <None Include="assets\images\backgrounds\LoginPanelBg.png" />
     <Content Include="coding.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

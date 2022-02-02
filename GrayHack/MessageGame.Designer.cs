@@ -39,7 +39,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(43)))));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.closeButton,
             this.titleLabel});
@@ -60,7 +60,6 @@
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(23, 22);
             this.closeButton.Text = "Close";
-
             // 
             // titleLabel
             // 
@@ -103,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(120)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(424, 166);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
