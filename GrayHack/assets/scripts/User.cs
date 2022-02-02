@@ -7,12 +7,12 @@ namespace GrayHack.assets.scripts
 	
 	public class User
 	{
-		private string _name;
-		private string _nowPath;
-		private string _pcPath;
-		private int _exp;
+		public string _name;
+		public string _nowPath;
+		public string _pcPath;
+		public int _exp;
 
-		List<Quest> _questList;
+		public List<Quest> _questList;
 
 		public User(string name, string nowPath, string pcPath, int exp, List<Quest> questList)
         {

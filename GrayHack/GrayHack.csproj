@@ -58,6 +58,7 @@
     <Compile Include="assets\scripts\Extensions.cs" />
     <Compile Include="assets\scripts\FileManager.cs" />
     <Compile Include="assets\scripts\Quest.cs" />
+    <Compile Include="assets\scripts\SettingManager.cs" />
     <Compile Include="assets\scripts\User.cs" />
     <Compile Include="assets\scripts\ZipManager.cs" />
     <Compile Include="CreateUser.cs">
@@ -131,6 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\icon\system\Menu.png" />
+    <None Include="assets\icon\system\UserProfile.png" />
+    <None Include="assets\icon\system\wifi.png" />
+    <None Include="assets\images\backgrounds\HackLabBg.png" />
     <Content Include="coding.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,13 +9,12 @@ namespace GrayHack
 {
     public partial class LoginMenu : Form
     {
+        
         public LoginMenu()
         {
             InitializeComponent();
             Typesetting();
         }
-
-        private bool _isFullScreen = false;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -23,7 +22,7 @@ namespace GrayHack
 
             ShutdownButton.Click += (s, a) => { CloseGame(); };
 
-            FullScreenCheckBox.Click += (s, a) => { this.GoFullscreen(); };
+            FullScreenCheckBox.Click += (s, a) => { this.GoFullScreen(); };
 
             CreateUserButton.Click += (s, a) => {
                 this.Enabled = false;
@@ -31,6 +30,8 @@ namespace GrayHack
                 createUser.ShowDialog();
                 this.Enabled = true;
                 };
+
+            this.FormClosed += (s, a) => { Program.Settings.SaveSettings(); };
         }
 
         
@@ -59,6 +60,7 @@ namespace GrayHack
                         User user = new User(LoginTextBox.Text, @"\", $@"{FileManager.GameFilePath}\computers\computer\", 0);
                         Desktop desktop = new Desktop(user);
                         desktop.Show();
+                       
                         this.Enabled = false;
                         this.Hide();
                     }

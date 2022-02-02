@@ -21,7 +21,7 @@ namespace GrayHack
 			
 			dateTimer.Start();
 			dateTimer.Tick += (s, a) => { dateLabel.SetDate(); };
-
+			UserProfileButton.Text = _user._name;
 		}
 
 		private void Desktop_FormClosing(object sender, FormClosingEventArgs e)
