@@ -15,8 +15,13 @@ namespace GrayHack
 
 		List<IconDesktop> _desktopIcons = new List<IconDesktop>()
         {
+			new IconDesktop(new Bitmap(Resources.FileExplorer), new MessageGame("Ты пидор")),
+			new IconDesktop(new Bitmap(Resources.Terminal), new MessageGame("Ты пидор")),
+			new IconDesktop(new Bitmap(Resources.Map), new MessageGame("Ты пидор")),
 			new IconDesktop(new Bitmap(Resources.Mail), new MessageGame("Ты пидор")),
-			new IconDesktop(new Bitmap(Resources.wifi), new MessageGame("Ты пидор")),
+			new IconDesktop(new Bitmap(Resources.Browser), new MessageGame("Ты пидор")),
+			new IconDesktop(new Bitmap(Resources.Notepad), new MessageGame("Ты пидор")),
+			new IconDesktop(new Bitmap(Resources.Manual), new MessageGame("Ты пидор"))
 	};
 		public Desktop(User user)
 		{
@@ -30,6 +35,7 @@ namespace GrayHack
 			dateTimer.Start();
 			dateTimer.Tick += (s, a) => { dateLabel.SetDate(); };
 			UserProfileButton.Text = _user._name;
+
 			LoadDesktopFiles(_desktopIcons);
 		}
 

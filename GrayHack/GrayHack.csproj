@@ -141,6 +141,13 @@
     <None Include="assets\images\backgrounds\LoginMenuBg.png" />
     <None Include="assets\images\backgrounds\LoginPanelBg.png" />
     <None Include="assets\icon\program\Mail.png" />
+    <None Include="assets\icon\program\FileExplorer.png" />
+    <None Include="assets\icon\program\Manual.png" />
+    <None Include="assets\icon\program\Map.png" />
+    <None Include="assets\icon\program\Notepad.png" />
+    <None Include="assets\icon\program\Terminal.png" />
+    <None Include="assets\icon\program\Trash.png" />
+    <None Include="assets\icon\program\Browser.png" />
     <Content Include="coding.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

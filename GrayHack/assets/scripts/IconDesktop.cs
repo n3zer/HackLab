@@ -12,6 +12,7 @@ namespace GrayHack.assets.scripts
         private Image _icon;
         public Form _programForm;
 
+        private static int _size = 120;
         public Button button = new Button();
 
         public IconDesktop(Bitmap icon, Form programForm)
@@ -31,24 +32,22 @@ namespace GrayHack.assets.scripts
             button.BackColor = Color.Transparent;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderSize = 0;
-            button.Size = new Size(90, 90);
-
-
+            button.FlatAppearance.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(63)))));
+            button.Size = new Size(_size, _size);
+            
             button.Click += (s, a) => { _programForm.Show(); };
-        }
-
-
-
-
-
-        public Image ConvertByteToImage(byte img)
-        {
-            using (var ms = new MemoryStream(img))
+            button.MouseEnter += (s, a) =>
             {
-                return Image.FromStream(ms);
-            }
+                button.FlatAppearance.BorderSize = 2;
+            };
+            button.MouseLeave += (s, a) => { button.FlatAppearance.BorderSize = 0; };
         }
+
+
         
+
+        
+
 
 
     }
