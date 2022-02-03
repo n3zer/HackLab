@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GrayHack
@@ -40,6 +41,7 @@ namespace GrayHack
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.dateTimer = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.DesktopFilesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TopMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,8 +75,7 @@ namespace GrayHack
             this.dateLabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(31, 22);
-            this.dateLabel.Text = "1.1.1";
+            this.dateLabel.Size = new System.Drawing.Size(0, 22);
             // 
             // UserProfileButton
             // 
@@ -119,6 +120,14 @@ namespace GrayHack
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // DesktopFilesPanel
+            // 
+            this.DesktopFilesPanel.BackColor = System.Drawing.Color.Transparent;
+            this.DesktopFilesPanel.Location = new System.Drawing.Point(12, 28);
+            this.DesktopFilesPanel.Name = "DesktopFilesPanel";
+            this.DesktopFilesPanel.Size = new System.Drawing.Size(1055, 539);
+            this.DesktopFilesPanel.TabIndex = 2;
+            // 
             // Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +136,7 @@ namespace GrayHack
             this.BackgroundImage = global::GrayHack.Properties.Resources.HackLabBg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1079, 595);
+            this.Controls.Add(this.DesktopFilesPanel);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.TopMenu);
             this.DoubleBuffered = true;
@@ -152,5 +162,6 @@ namespace GrayHack
         private System.Windows.Forms.ToolStripButton WifiButton;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        public FlowLayoutPanel DesktopFilesPanel;
     }
 }
