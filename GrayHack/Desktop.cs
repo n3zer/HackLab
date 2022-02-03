@@ -15,13 +15,13 @@ namespace GrayHack
 
 		List<IconDesktop> _desktopIcons = new List<IconDesktop>()
         {
-			new IconDesktop(new Bitmap(Resources.FileExplorer), new MessageGame("Ты пидор")),
-			new IconDesktop(new Bitmap(Resources.Terminal), new MessageGame("Ты пидор")),
-			new IconDesktop(new Bitmap(Resources.Map), new MessageGame("Ты пидор")),
-			new IconDesktop(new Bitmap(Resources.Mail), new MessageGame("Ты пидор")),
-			new IconDesktop(new Bitmap(Resources.Browser), new MessageGame("Ты пидор")),
-			new IconDesktop(new Bitmap(Resources.Notepad), new MessageGame("Ты пидор")),
-			new IconDesktop(new Bitmap(Resources.Manual), new MessageGame("Ты пидор"))
+			new IconDesktop(new Bitmap(Resources.FileExplorer), new MessageGame("")),
+			new IconDesktop(new Bitmap(Resources.Terminal), new MessageGame("")),
+			new IconDesktop(new Bitmap(Resources.Map), new MessageGame("")),
+			new IconDesktop(new Bitmap(Resources.Mail), new MessageGame("")),
+			new IconDesktop(new Bitmap(Resources.Browser), new MessageGame("")),
+			new IconDesktop(new Bitmap(Resources.Notepad), new MessageGame("")),
+			new IconDesktop(new Bitmap(Resources.Manual), new MessageGame(""))
 	};
 		public Desktop(User user)
 		{
@@ -35,13 +35,18 @@ namespace GrayHack
 			dateTimer.Start();
 			dateTimer.Tick += (s, a) => { dateLabel.SetDate(); };
 			UserProfileButton.Text = _user._name;
+			ShutdownButton.Click += (s, a) => { this.Close(); };
+
+			MenuButton.Click += (s, a) => {
+				StartMenuPanel.Visible = !StartMenuPanel.Visible;
+			};
 
 			LoadDesktopFiles(_desktopIcons);
 		}
 
 		private void Desktop_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			MessageGame mg = new MessageGame("Вы действительно хотите закрыть игру?");
+			MessageGame mg = new MessageGame("Вы уверены что хотите выключить компьютер?", "Shutdown");
 			mg.ShowDialog();
 			if (mg.result)
 				Process.GetCurrentProcess().Kill();
@@ -56,5 +61,14 @@ namespace GrayHack
 				DesktopFilesPanel.Controls.Add(icon.button);
 			}
 		}
-    }
+
+		//public static void DeleteDesktopFiles(IconDesktop icon)
+		//      {
+		//	_desktopIcons.Remove(icon);
+		//	DesktopFilesPanel.Controls.Remove(icon.button);
+		//}
+
+
+
+	}
 }

@@ -41,9 +41,11 @@ namespace GrayHack
             titleLabel.Text = _title;
             textLabel.Text = _text;
 
-            closeButton.Click += (s, a) => { this.Close(); };
-            OkButton.Click += (s, a) => { result = true; this.Close(); };
-            CancelButton.Click += (s, a) => { this.Close(); };
+            
+
+            closeButton.Click += (s, a) => { this.Hide(); };
+            OkButton.Click += (s, a) => { result = true; this.Hide(); };
+            CancelButton.Click += (s, a) => { this.Hide(); };
 
             
             

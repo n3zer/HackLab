@@ -61,6 +61,7 @@
     <Compile Include="assets\scripts\FileManager.cs" />
     <Compile Include="assets\scripts\IconDesktop.cs" />
     <Compile Include="assets\scripts\Quest.cs" />
+    <Compile Include="assets\scripts\RightClickMenu.cs" />
     <Compile Include="assets\scripts\SettingManager.cs" />
     <Compile Include="assets\scripts\User.cs" />
     <Compile Include="assets\scripts\ZipManager.cs" />
@@ -82,6 +83,12 @@
     <Compile Include="LoginMenu.Designer.cs">
       <DependentUpon>LoginMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual.Designer.cs">
+      <DependentUpon>Manual.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginMenu.resx">
       <DependentUpon>LoginMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual.resx">
+      <DependentUpon>Manual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageGame.resx">
       <DependentUpon>MessageGame.cs</DependentUpon>

@@ -110,7 +110,10 @@
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MessageGame";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Message";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Message_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

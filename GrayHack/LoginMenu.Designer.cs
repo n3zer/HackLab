@@ -146,6 +146,7 @@ namespace GrayHack
             this.ShutdownButton.TabIndex = 1;
             this.ShutdownButton.TabStop = false;
             this.ShutdownButton.UseVisualStyleBackColor = false;
+            this.ShutdownButton.Click += new System.EventHandler(this.ShutdownButton_Click);
             // 
             // LoginMenu
             // 

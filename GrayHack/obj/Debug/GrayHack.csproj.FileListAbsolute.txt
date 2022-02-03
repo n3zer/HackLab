@@ -25,3 +25,4 @@ C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.csproj.Generate
 C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.csproj.CoreCompileInputs.cache
 C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.exe
 C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.pdb
+E:\проекты\c#\GrayHack\GrayHack\obj\Debug\GrayHack.Manual.resources

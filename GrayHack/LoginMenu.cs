@@ -69,5 +69,9 @@ namespace GrayHack
             }
         }
 
+        private void ShutdownButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
