@@ -13,16 +13,7 @@ namespace GrayHack
 
 		User _user;
 
-		List<IconDesktop> _desktopIcons = new List<IconDesktop>()
-        {
-			new IconDesktop(new Bitmap(Resources.FileExplorer), new MessageGame("")),
-			new IconDesktop(new Bitmap(Resources.Terminal), new MessageGame("")),
-			new IconDesktop(new Bitmap(Resources.Map), new MessageGame("")),
-			new IconDesktop(new Bitmap(Resources.Mail), new MessageGame("")),
-			new IconDesktop(new Bitmap(Resources.Browser), new MessageGame("")),
-			new IconDesktop(new Bitmap(Resources.Notepad), new MessageGame("")),
-			new IconDesktop(new Bitmap(Resources.Manual), new MessageGame(""))
-	};
+		
 		public Desktop(User user)
 		{
 			InitializeComponent();
@@ -41,7 +32,7 @@ namespace GrayHack
 				StartMenuPanel.Visible = !StartMenuPanel.Visible;
 			};
 
-			LoadDesktopFiles(_desktopIcons);
+			IconDesktop.LoadIcon(IconDesktop._desktopIcons, DesktopFilesPanel, IconContextMenu);
 		}
 
 		private void Desktop_FormClosing(object sender, FormClosingEventArgs e)
@@ -54,19 +45,9 @@ namespace GrayHack
 				e.Cancel = true;
 		}
 
-		private void LoadDesktopFiles(List<IconDesktop> icons)
-        {
-			foreach (IconDesktop icon in icons)
-            {
-				DesktopFilesPanel.Controls.Add(icon.button);
-			}
-		}
+		
 
-		//public static void DeleteDesktopFiles(IconDesktop icon)
-		//      {
-		//	_desktopIcons.Remove(icon);
-		//	DesktopFilesPanel.Controls.Remove(icon.button);
-		//}
+		
 
 
 

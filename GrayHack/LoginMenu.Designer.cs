@@ -110,7 +110,7 @@ namespace GrayHack
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(201, 45);
-            this.PasswordTextBox.TabIndex = 0;
+            this.PasswordTextBox.TabIndex = 1;
             // 
             // LoginTextBox
             // 
@@ -128,7 +128,7 @@ namespace GrayHack
             this.FullScreenCheckBox.Location = new System.Drawing.Point(12, 12);
             this.FullScreenCheckBox.Name = "FullScreenCheckBox";
             this.FullScreenCheckBox.Size = new System.Drawing.Size(79, 17);
-            this.FullScreenCheckBox.TabIndex = 2;
+            this.FullScreenCheckBox.TabIndex = 4;
             this.FullScreenCheckBox.Text = "Full Screen";
             this.FullScreenCheckBox.UseVisualStyleBackColor = false;
             // 
@@ -143,8 +143,7 @@ namespace GrayHack
             this.ShutdownButton.Location = new System.Drawing.Point(1308, 638);
             this.ShutdownButton.Name = "ShutdownButton";
             this.ShutdownButton.Size = new System.Drawing.Size(37, 37);
-            this.ShutdownButton.TabIndex = 1;
-            this.ShutdownButton.TabStop = false;
+            this.ShutdownButton.TabIndex = 5;
             this.ShutdownButton.UseVisualStyleBackColor = false;
             this.ShutdownButton.Click += new System.EventHandler(this.ShutdownButton_Click);
             // 

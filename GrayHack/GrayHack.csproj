@@ -61,7 +61,6 @@
     <Compile Include="assets\scripts\FileManager.cs" />
     <Compile Include="assets\scripts\IconDesktop.cs" />
     <Compile Include="assets\scripts\Quest.cs" />
-    <Compile Include="assets\scripts\RightClickMenu.cs" />
     <Compile Include="assets\scripts\SettingManager.cs" />
     <Compile Include="assets\scripts\User.cs" />
     <Compile Include="assets\scripts\ZipManager.cs" />

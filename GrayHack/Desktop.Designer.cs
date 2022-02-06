@@ -43,11 +43,17 @@ namespace GrayHack
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.DesktopFilesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.StartMenuPanel = new System.Windows.Forms.Panel();
-            this.ShutdownButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ShutdownButton = new System.Windows.Forms.Button();
+            this.IconContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textDocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.folderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TopMenu.SuspendLayout();
             this.StartMenuPanel.SuspendLayout();
+            this.IconContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopMenu
@@ -146,6 +152,24 @@ namespace GrayHack
             this.StartMenuPanel.TabIndex = 0;
             this.StartMenuPanel.Visible = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(157, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Properties";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "help";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ShutdownButton
             // 
             this.ShutdownButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -161,23 +185,40 @@ namespace GrayHack
             this.ShutdownButton.TabStop = false;
             this.ShutdownButton.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // IconContextMenu
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "help";
-            this.button1.UseVisualStyleBackColor = true;
+            this.IconContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.IconContextMenu.Name = "IconContextMenu";
+            this.IconContextMenu.Size = new System.Drawing.Size(181, 70);
             // 
-            // button2
+            // addToolStripMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(3, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Properties";
-            this.button2.UseVisualStyleBackColor = true;
+            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.textDocToolStripMenuItem,
+            this.folderToolStripMenuItem});
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
+            // textDocToolStripMenuItem
+            // 
+            this.textDocToolStripMenuItem.Name = "textDocToolStripMenuItem";
+            this.textDocToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.textDocToolStripMenuItem.Text = "Text doc";
+            // 
+            // folderToolStripMenuItem
+            // 
+            this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
+            this.folderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.folderToolStripMenuItem.Text = "Folder";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // Desktop
             // 
@@ -199,6 +240,7 @@ namespace GrayHack
             this.TopMenu.ResumeLayout(false);
             this.TopMenu.PerformLayout();
             this.StartMenuPanel.ResumeLayout(false);
+            this.IconContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +262,10 @@ namespace GrayHack
         private Button ShutdownButton;
         private Button button2;
         private Button button1;
+        private ContextMenuStrip IconContextMenu;
+        private ToolStripMenuItem addToolStripMenuItem;
+        private ToolStripMenuItem textDocToolStripMenuItem;
+        private ToolStripMenuItem folderToolStripMenuItem;
+        private ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
