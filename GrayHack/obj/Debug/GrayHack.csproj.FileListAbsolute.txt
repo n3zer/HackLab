@@ -27,3 +27,4 @@ C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.exe
 C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.pdb
 E:\проекты\c#\GrayHack\GrayHack\obj\Debug\GrayHack.Manual.resources
 C:\Users\itstep\source\repos\HackLab\GrayHack\obj\Debug\GrayHack.Manual.resources
+E:\проекты\c#\GrayHack\GrayHack\obj\Debug\GrayHack.FileExplorer.resources
