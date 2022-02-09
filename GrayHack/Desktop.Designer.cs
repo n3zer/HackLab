@@ -38,22 +38,20 @@ namespace GrayHack
             this.dateLabel = new System.Windows.Forms.ToolStripLabel();
             this.UserProfileButton = new System.Windows.Forms.ToolStripButton();
             this.WifiButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.dateTimer = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.DesktopFilesPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.DesktopContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.folderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtDocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StartMenuPanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ShutdownButton = new System.Windows.Forms.Button();
-            this.IconContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textDocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.folderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TopMenu.SuspendLayout();
+            this.DesktopContextMenuStrip.SuspendLayout();
             this.StartMenuPanel.SuspendLayout();
-            this.IconContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopMenu
@@ -63,8 +61,7 @@ namespace GrayHack
             this.MenuButton,
             this.dateLabel,
             this.UserProfileButton,
-            this.WifiButton,
-            this.toolStripProgressBar1});
+            this.WifiButton});
             this.TopMenu.Location = new System.Drawing.Point(0, 0);
             this.TopMenu.Name = "TopMenu";
             this.TopMenu.Size = new System.Drawing.Size(1130, 25);
@@ -109,14 +106,6 @@ namespace GrayHack
             this.WifiButton.Size = new System.Drawing.Size(23, 22);
             this.WifiButton.Text = "wifi";
             // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(20, 22);
-            this.toolStripProgressBar1.Value = 50;
-            // 
             // dateTimer
             // 
             this.dateTimer.Interval = 2000;
@@ -134,11 +123,41 @@ namespace GrayHack
             // DesktopFilesPanel
             // 
             this.DesktopFilesPanel.BackColor = System.Drawing.Color.Transparent;
+            this.DesktopFilesPanel.ContextMenuStrip = this.DesktopContextMenuStrip;
             this.DesktopFilesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DesktopFilesPanel.Location = new System.Drawing.Point(0, 25);
             this.DesktopFilesPanel.Name = "DesktopFilesPanel";
             this.DesktopFilesPanel.Size = new System.Drawing.Size(1130, 545);
             this.DesktopFilesPanel.TabIndex = 2;
+            // 
+            // DesktopContextMenuStrip
+            // 
+            this.DesktopContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem});
+            this.DesktopContextMenuStrip.Name = "DesktopContextMenuStrip1";
+            this.DesktopContextMenuStrip.Size = new System.Drawing.Size(181, 48);
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.folderToolStripMenuItem,
+            this.txtDocToolStripMenuItem});
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
+            // folderToolStripMenuItem
+            // 
+            this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
+            this.folderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.folderToolStripMenuItem.Text = "Folder";
+
+            // 
+            // txtDocToolStripMenuItem
+            // 
+            this.txtDocToolStripMenuItem.Name = "txtDocToolStripMenuItem";
+            this.txtDocToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.txtDocToolStripMenuItem.Text = ".txt document";
             // 
             // StartMenuPanel
             // 
@@ -185,41 +204,6 @@ namespace GrayHack
             this.ShutdownButton.TabStop = false;
             this.ShutdownButton.UseVisualStyleBackColor = false;
             // 
-            // IconContextMenu
-            // 
-            this.IconContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.IconContextMenu.Name = "IconContextMenu";
-            this.IconContextMenu.Size = new System.Drawing.Size(181, 70);
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.textDocToolStripMenuItem,
-            this.folderToolStripMenuItem});
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addToolStripMenuItem.Text = "Add";
-            // 
-            // textDocToolStripMenuItem
-            // 
-            this.textDocToolStripMenuItem.Name = "textDocToolStripMenuItem";
-            this.textDocToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.textDocToolStripMenuItem.Text = "Text doc";
-            // 
-            // folderToolStripMenuItem
-            // 
-            this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
-            this.folderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.folderToolStripMenuItem.Text = "Folder";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
             // Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,8 +223,8 @@ namespace GrayHack
             this.Load += new System.EventHandler(this.Desktop_Load);
             this.TopMenu.ResumeLayout(false);
             this.TopMenu.PerformLayout();
+            this.DesktopContextMenuStrip.ResumeLayout(false);
             this.StartMenuPanel.ResumeLayout(false);
-            this.IconContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,16 +240,14 @@ namespace GrayHack
         private System.Windows.Forms.ToolStripButton UserProfileButton;
         private System.Windows.Forms.ToolStripButton WifiButton;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         public FlowLayoutPanel DesktopFilesPanel;
         private Panel StartMenuPanel;
         private Button ShutdownButton;
         private Button button2;
         private Button button1;
-        private ContextMenuStrip IconContextMenu;
+        private ContextMenuStrip DesktopContextMenuStrip;
         private ToolStripMenuItem addToolStripMenuItem;
-        private ToolStripMenuItem textDocToolStripMenuItem;
         private ToolStripMenuItem folderToolStripMenuItem;
-        private ToolStripMenuItem deleteToolStripMenuItem;
+        private ToolStripMenuItem txtDocToolStripMenuItem;
     }
 }

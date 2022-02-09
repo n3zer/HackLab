@@ -8,7 +8,7 @@ using GrayHack.Properties;
 
 namespace GrayHack.assets.scripts
 {
-	public class IconDesktop
+	public class IconManager
 	{
 		private Image _icon;
 		private string _name;
@@ -19,19 +19,10 @@ namespace GrayHack.assets.scripts
 
 		public Control _parent;
 
-		public static List<IconDesktop> _desktopIcons = new List<IconDesktop>()
-		{
-			new IconDesktop(new Bitmap(Resources.FileExplorer), new MessageGame(""), "FileExplorer"),
-			new IconDesktop(new Bitmap(Resources.Terminal), new MessageGame(""), "Terminal"),
-			new IconDesktop(new Bitmap(Resources.Map), new MessageGame(""), "Map"),
-			new IconDesktop(new Bitmap(Resources.Mail), new MessageGame(""), "Mail"),
-			new IconDesktop(new Bitmap(Resources.Browser), new MessageGame(""), "Browser"),
-			new IconDesktop(new Bitmap(Resources.Notepad), new MessageGame(""), "Notepad"),
-			new IconDesktop(new Bitmap(Resources.Manual), new MessageGame(""), "Manual")
-	};
+		
 
 
-		public IconDesktop(Bitmap icon, Form programForm, string name)
+		public IconManager(List<IconManager> icons, Bitmap icon, Form programForm, string name)
 		{
 			_name = name;
 			_programForm = programForm;
@@ -49,7 +40,7 @@ namespace GrayHack.assets.scripts
 			button.BackColor = Color.Transparent;
 			button.FlatStyle = FlatStyle.Flat;
 			button.FlatAppearance.BorderSize = 0;
-			button.FlatAppearance.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(63)))));
+			button.FlatAppearance.BorderColor = Color.FromArgb(0, 76, 63);
 			button.Size = new Size(_size, _size);
 			button.SetRoundedShape(15);
 
@@ -60,51 +51,49 @@ namespace GrayHack.assets.scripts
 
 
 
-
+			// Context Menu set
 			button.ContextMenuStrip = new ContextMenuStrip();
-			ToolStripMenuItem AddToolStripMenuItem = new ToolStripMenuItem();
-			AddToolStripMenuItem.Text = "Add";
-
-			ToolStripMenuItem TextdocToolStripMenuItem = new ToolStripMenuItem();
-			TextdocToolStripMenuItem.Text = "Text doc";
-
-			AddToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] {
-				TextdocToolStripMenuItem
-			});
-
-
+			ToolStripMenuItem OpenToolStripMenuItem = new ToolStripMenuItem();
+			OpenToolStripMenuItem.Text = "Open";
 
 			ToolStripMenuItem DeleteToolStripMenuItem = new ToolStripMenuItem();
 			DeleteToolStripMenuItem.Text = "Delete";
-			DeleteToolStripMenuItem.Click += (s, a) => { DeleteIcon(this); };
+			DeleteToolStripMenuItem.Click += (s, a) => { DeleteIcon(this, Desktop._desktopIcons); };
 
 			button.ContextMenuStrip.Items.AddRange(new ToolStripItem[] {
-				AddToolStripMenuItem, DeleteToolStripMenuItem
+				OpenToolStripMenuItem, DeleteToolStripMenuItem
 			});
 
 
-
-
+			// bind method
 			button.Click += (s, a) => { _programForm.Show(); };
 			button.MouseEnter += (s, a) => { button.FlatAppearance.BorderSize = 5; };
 			button.MouseLeave += (s, a) => { button.FlatAppearance.BorderSize = 0; };
 		}
-		// delete item il icons list
-		public void DeleteIcon(IconDesktop icon)
-		{
-			_desktopIcons.Remove(icon);
-			LoadIcon(_desktopIcons, _parent);
-		}
 
-		public static void LoadIcon(List<IconDesktop> icons, Control parent)
+		// delete item il icons list
+		public void DeleteIcon(IconManager icon, List<IconManager> icons)
+		{
+			icons.Remove(icon);
+			_parent.Controls.Remove(icon.button);
+		}
+		
+		public static void AddIcon(List<IconManager> icons, IconManager icon, Control control)
+        {
+			icons.Add(icon);
+			icon._parent = control;
+			icon._parent.Controls.Add(icon.button);
+        }
+
+		public static void LoadIcon(List<IconManager> icons, Control parent)
 		{
 			LoadIcon(icons, parent, null);
 		}
 
-		public static void LoadIcon(List<IconDesktop> icons, Control parent, ContextMenuStrip rmenu)
+		public static void LoadIcon(List<IconManager> icons, Control parent, ContextMenuStrip rmenu)
 		{
 			parent.Controls.Clear();
-			foreach (IconDesktop icon in icons)
+			foreach (IconManager icon in icons)
 			{
 				parent.Controls.Add(icon.button);
 				icon._parent = parent;

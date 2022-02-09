@@ -59,7 +59,7 @@
     <Compile Include="assets\scripts\Encode.cs" />
     <Compile Include="assets\scripts\Extensions.cs" />
     <Compile Include="assets\scripts\FileManager.cs" />
-    <Compile Include="assets\scripts\IconDesktop.cs" />
+    <Compile Include="assets\scripts\IconManager.cs" />
     <Compile Include="assets\scripts\Quest.cs" />
     <Compile Include="assets\scripts\SettingManager.cs" />
     <Compile Include="assets\scripts\User.cs" />
@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="Desktop.Designer.cs">
       <DependentUpon>Desktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileExplorer.Designer.cs">
+      <DependentUpon>FileExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginMenu.cs">
       <SubType>Form</SubType>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop.resx">
       <DependentUpon>Desktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileExplorer.resx">
+      <DependentUpon>FileExplorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginMenu.resx">
       <DependentUpon>LoginMenu.cs</DependentUpon>
@@ -157,6 +166,7 @@
     <None Include="assets\icon\program\Terminal.png" />
     <None Include="assets\icon\program\Trash.png" />
     <None Include="assets\icon\program\Browser.png" />
+    <None Include="assets\icon\program\Folder.png" />
     <Content Include="coding.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
