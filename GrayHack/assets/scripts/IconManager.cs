@@ -41,13 +41,13 @@ namespace GrayHack.assets.scripts
 			button.FlatStyle = FlatStyle.Flat;
 			button.FlatAppearance.BorderSize = 0;
 			button.FlatAppearance.BorderColor = Color.FromArgb(0, 76, 63);
-			button.Size = new Size(_size, _size);
+			button.Size = new Size(_size, _size+40);
 			button.SetRoundedShape(15);
 
-			Pen pen = new Pen(Color.Black, 100f);
-			Graphics g = button.CreateGraphics();
-			g.DrawRectangle(pen, 1000, 1000, 100, 100);
 
+			button.Text = _name;
+			button.ForeColor = Color.White;
+			button.TextAlign = ContentAlignment.BottomCenter;
 
 
 
@@ -66,7 +66,12 @@ namespace GrayHack.assets.scripts
 
 
 			// bind method
-			button.Click += (s, a) => { _programForm.Show(); };
+			button.Click += (s, a) => { 
+				_programForm.Show(); 
+				Desktop.AddProgramToMenu(_name, this); 
+				_programForm.VisibleChanged += (sender, e) => { Desktop.RemoveProgramToMenu(_name); };
+				
+			};
 			button.MouseEnter += (s, a) => { button.FlatAppearance.BorderSize = 5; };
 			button.MouseLeave += (s, a) => { button.FlatAppearance.BorderSize = 0; };
 		}

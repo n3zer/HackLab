@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using GrayHack.Properties;
 
 namespace GrayHack.assets.scripts
 {
@@ -17,7 +18,22 @@ namespace GrayHack.assets.scripts
 				Directory.CreateDirectory(path);
 		}
 
-		
+        public static List<IconManager> GetFilesInFolder(List<IconManager>, string path)
+        {
+            List < IconManager > res = new List < IconManager >();
+            if (File.Exists(path))
+            {
+                var files = Directory.GetFiles(path);
+                foreach (var file in files)
+                {
+                    //res.Add(new IconManager( ))
+                }
+            }
 
-	}
+            return res;
+        }
+
+
+
+    }
 }

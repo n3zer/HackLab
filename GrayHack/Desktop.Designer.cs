@@ -39,7 +39,7 @@ namespace GrayHack
             this.UserProfileButton = new System.Windows.Forms.ToolStripButton();
             this.WifiButton = new System.Windows.Forms.ToolStripButton();
             this.dateTimer = new System.Windows.Forms.Timer(this.components);
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BottomMenu = new System.Windows.Forms.ToolStrip();
             this.DesktopFilesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.DesktopContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,15 +110,15 @@ namespace GrayHack
             // 
             this.dateTimer.Interval = 2000;
             // 
-            // toolStrip1
+            // BottomMenu
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(43)))));
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip1.Location = new System.Drawing.Point(0, 570);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1130, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.BottomMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(43)))));
+            this.BottomMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomMenu.Location = new System.Drawing.Point(0, 570);
+            this.BottomMenu.Name = "BottomMenu";
+            this.BottomMenu.Size = new System.Drawing.Size(1130, 25);
+            this.BottomMenu.TabIndex = 1;
+            this.BottomMenu.Text = "toolStrip1";
             // 
             // DesktopFilesPanel
             // 
@@ -135,7 +135,7 @@ namespace GrayHack
             this.DesktopContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem});
             this.DesktopContextMenuStrip.Name = "DesktopContextMenuStrip1";
-            this.DesktopContextMenuStrip.Size = new System.Drawing.Size(181, 48);
+            this.DesktopContextMenuStrip.Size = new System.Drawing.Size(97, 26);
             // 
             // addToolStripMenuItem
             // 
@@ -143,20 +143,19 @@ namespace GrayHack
             this.folderToolStripMenuItem,
             this.txtDocToolStripMenuItem});
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.addToolStripMenuItem.Text = "Add";
             // 
             // folderToolStripMenuItem
             // 
             this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
-            this.folderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.folderToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.folderToolStripMenuItem.Text = "Folder";
-
             // 
             // txtDocToolStripMenuItem
             // 
             this.txtDocToolStripMenuItem.Name = "txtDocToolStripMenuItem";
-            this.txtDocToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.txtDocToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.txtDocToolStripMenuItem.Text = ".txt document";
             // 
             // StartMenuPanel
@@ -214,7 +213,7 @@ namespace GrayHack
             this.ClientSize = new System.Drawing.Size(1130, 595);
             this.Controls.Add(this.StartMenuPanel);
             this.Controls.Add(this.DesktopFilesPanel);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.BottomMenu);
             this.Controls.Add(this.TopMenu);
             this.DoubleBuffered = true;
             this.Name = "Desktop";
@@ -239,7 +238,7 @@ namespace GrayHack
         private System.Windows.Forms.Timer dateTimer;
         private System.Windows.Forms.ToolStripButton UserProfileButton;
         private System.Windows.Forms.ToolStripButton WifiButton;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip BottomMenu;
         public FlowLayoutPanel DesktopFilesPanel;
         private Panel StartMenuPanel;
         private Button ShutdownButton;

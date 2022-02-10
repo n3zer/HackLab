@@ -167,6 +167,8 @@
     <None Include="assets\icon\program\Trash.png" />
     <None Include="assets\icon\program\Browser.png" />
     <None Include="assets\icon\program\Folder.png" />
+    <None Include="assets\icon\system\Arrow-down.png" />
+    <None Include="assets\icon\system\Arrow.png" />
     <Content Include="coding.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

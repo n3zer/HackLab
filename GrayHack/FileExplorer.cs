@@ -24,16 +24,17 @@ namespace GrayHack
         {
             InitializeComponent();
             _path = FileManager.pathToPlayerPc + path;
-            pathLabel.Text = _path;
+            pathLabel.Text = GetPath(path);
             closeButton.Click += (s, a) => { this.Hide(); };
 
         }
 
-
+        // remove url trash 
         private string GetPath(string path)
         {
-            return path.Replace(FileManager.GameFilePath, "");
+            return path.Replace(FileManager.pathToPlayerPc, "");
         }
+
         private void MovingWindow(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -45,5 +46,7 @@ namespace GrayHack
                 this.DefWndProc(ref msg);
             }
         }
+
+        
     }
 }
